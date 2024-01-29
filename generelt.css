@@ -1,0 +1,57 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 2px solid black;
+}
+
+.grid_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 200px;
+  align-items: center;
+  justify-content: center;
+  margin: 15%;
+}
+
+.grid_2-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 10%;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Sørger for, at elementer ruller til næste linje, hvis de ikke passer på skærmen */
+}
+article.grid_2-1 {
+  display: flex;
+  flex-direction: row; /* Standard rækkefølge: børnene følger rækkefølgen i HTML */
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid_2 {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+  article.grid_2-1 {
+    flex-direction: column; /* Skift til kolonne-layout på mindre skærme */
+  }
+
+  /* Ryk billedsektionen til toppen */
+  .container_billede {
+    order: -1; /* Sætter billedsektionen øverst i rækkefølgen */
+  }
+}

@@ -1,0 +1,111 @@
+main {
+  max-width: 1200px;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+nav a {
+  padding: 4em;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+nav {
+  text-align: right;
+  margin: 50px;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.logo {
+  max-width: 40%;
+}
+
+.container_billede {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.produkt_billede {
+  max-width: 60%;
+  align-items: center;
+}
+
+.knap_kurv,
+.knap_fav {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px 20px; /* Juster polstringen efter behov */
+  color: #333; /* Tekstfarve for knapper */
+  text-decoration: none; /* Fjern understregning fra links */
+  border-radius: 5px; /* Afrund hjørnerne af knapper */
+}
+
+.product-link {
+  flex: 0 0 calc(33.33% - 20px); /* 33.33% - 20px for at have tre produkter på hver linje med plads imellem */
+  margin: 10px; /* Tilføj lidt plads mellem produkterne */
+}
+
+article {
+  /* Tilpas stilen på hvert produktartikel efter behov */
+  background-color: rgb(219, 216, 215);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+article h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+article p {
+  margin: 5px 0;
+}
+.article:hover {
+  transform: scale(1.1); /* Gør produktet 10% større ved hover */
+}
+.article .price {
+  font-weight: bold;
+  color: #333;
+}
+
+.category-link {
+  text-decoration: none;
+  flex: 0 0 50%; /* To kategorier pr. række på stor skærm */
+  border-bottom: 1px solid #ccc; /* Border under hver kategori */
+  box-sizing: border-box;
+}
+
+.category {
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    margin: 0;
+  }
+
+  .category-link {
+    flex-basis: 100%; /* En kategori pr. række på mindre skærm */
+  }
+  .categories {
+    flex-direction: column; /* Skift retning til kolonne på mindre skærme */
+  }
+  .product-link,
+  .product-list {
+    flex-direction: column;
+  }
+  article {
+    flex-direction: column; /* Ændrer layout til kolonne på mindre skærme */
+  }
+}
