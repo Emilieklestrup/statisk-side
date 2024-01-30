@@ -4,8 +4,32 @@ main {
   margin-right: 5%;
 }
 
+@font-face {
+  font-family: titil;
+  src: url(fonts/titilliumweb-regular-webfont.woff2-kopi);
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+nav {
+  font-family: titil;
+}
+
+h1 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+}
+a {
+  font-size: 20px;
+}
+
 nav a {
-  padding: 4em;
+  padding: 2em;
   text-decoration: none;
   color: black;
   font-size: 20px;
@@ -45,7 +69,10 @@ a {
   text-decoration: none; /* Fjern understregning fra links */
   border-radius: 5px; /* Afrund hjørnerne af knapper */
 }
-
+.knap_hjerte,
+.knap_indkøb {
+  max-width: 30%;
+}
 .product-link {
   flex: 0 0 calc(33.33% - 20px); /* 33.33% - 20px for at have tre produkter på hver linje med plads imellem */
   margin: 10px; /* Tilføj lidt plads mellem produkterne */
@@ -64,11 +91,12 @@ article img {
 }
 
 article h3 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 22px;
+  margin: 2px 0;
 }
 
 article p {
+  font-size: 15px;
   margin: 5px 0;
 }
 .article:hover {
@@ -88,6 +116,10 @@ article p {
 
 .category {
   padding: 20px;
+}
+
+.Indkøbskurv {
+  max-width: 5%;
 }
 
 @media screen and (max-width: 768px) {

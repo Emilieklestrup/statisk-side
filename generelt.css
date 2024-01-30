@@ -13,10 +13,9 @@
 .grid_2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 200px;
+  grid-gap: 100px;
   align-items: center;
-  justify-content: center;
-  margin: 15%;
+  margin: 10%;
 }
 
 .grid_2-1 {
