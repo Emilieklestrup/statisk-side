@@ -45,8 +45,9 @@ a {
   transition: transform 0.3s;
 }
 
-.logo {
-  max-width: 40%;
+img .logo {
+  max-width: 100%;
+  margin-top: 20%;
 }
 
 .container_billede {
@@ -80,7 +81,7 @@ a {
 
 article {
   /* Tilpas stilen på hvert produktartikel efter behov */
-  background-color: rgb(219, 216, 215);
+  background-color: rgba(214, 205, 214, 0.283);
   padding: 10px;
   border-radius: 5px;
   position: relative;
@@ -97,7 +98,7 @@ article h3 {
 }
 
 article p {
-  font-size: 15px;
+  font-size: 20px;
   margin: 5px 0;
 }
 .article:hover {
@@ -155,7 +156,9 @@ article p {
   nav {
     margin: 0;
   }
-
+  nav a {
+    padding: 0;
+  }
   .category-link {
     flex-basis: 100%; /* En kategori pr. række på mindre skærm */
   }
@@ -168,5 +171,15 @@ article p {
   }
   article {
     flex-direction: column; /* Ændrer layout til kolonne på mindre skærme */
+  }
+  .knap_hjerte,
+  .knap_indkøb {
+    max-width: 10%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 15px;
   }
 }

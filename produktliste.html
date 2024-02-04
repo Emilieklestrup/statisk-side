@@ -11,7 +11,7 @@
     <header>
       <article class="nav">
         <section>
-          <img class="logo" src="img/logo.webp" alt="logo" />
+          <img class="logo" src="img/logo1.png" alt="logo" />
         </section>
         <section class="grid_3">
           <nav>
@@ -39,25 +39,35 @@
     </header>
 
     <main>
-      <h1 class="">Produktliste</h1>
-      <div class="product-list">
-        <a href="produkt.html" class="product-link">
-          <article>
-            <img
-              src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
-              alt="lille billede af produkt"
-            />
-            <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-            <p>NIKE - Sports</p>
-            <p class="price">895 DKK</p>
-            <p>Read more</p>
-            <p class="udsolgt">Udsolgt</p>
-          </article>
-        </a>
+      <h1>Produktliste</h1>
 
+      <template id="smallProductTemplate">
+        <div class="product-list">
+          <a href="produkt.html" class="product-link">
+            <article class="smallProduct">
+              <img
+                class="billeder"
+                src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+                alt="lille billede af produkt"
+              />
+              <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+
+              <p class="mærke">NIKE - Sports</p>
+
+              <p class="price">895 DKK</p>
+
+              <p>Read more</p>
+
+              <p class="udsolgt">Udsolgt</p>
+            </article>
+          </a>
+        </div>
+      </template>
+
+      <!-- 
         <a href="produkt.html" class="product-link">
-          <article>
-            <img
+           <article class="smallProduct">
+            <img class="billeder"
               src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp"
               alt="lille billede af produkt"
             />
@@ -69,8 +79,8 @@
         </a>
 
         <a href="produkt.html" class="product-link">
-          <article>
-            <img
+          <article class="smallProduct">
+            <img class="billeder"
               src="https://kea-alt-del.dk/t7/images/webp/640/1165.webp"
               alt="lille billede af produkt"
             />
@@ -87,8 +97,8 @@
         </a>
 
         <a href="produkt.html" class="product-link">
-          <article>
-            <img
+         <article class="smallProduct">
+          <img class="billeder"
               src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp"
               alt="lille billede af produkt"
             />
@@ -100,8 +110,8 @@
         </a>
 
         <a href="produkt.html" class="product-link">
-          <article>
-            <img
+          <article class="smallProduct">
+            <img class="billeder"
               src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp"
               alt="lille billede af produkt"
             />
@@ -109,10 +119,10 @@
             <p>PUMA - Sports</p>
             <p class="price">1299 DKK</p>
             <p>Read more</p>
-          </article>
-        </a>
-      </div>
+          </article> -->
+      <!-- </a> -->
     </main>
+    <script src="produktliste.js"></script>
     <footer></footer>
   </body>
 </html>
