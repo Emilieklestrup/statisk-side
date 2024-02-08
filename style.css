@@ -141,33 +141,27 @@ article p {
   /* Eventuelle andre stilarter efter behov */
 }
 
-.categories {
+ol {
+  list-style-type: none;
+  /* column-count: 2;
+  column-gap: 3rem; */
+}
+
+/* li {
+  margin-top: 20%;
+} */
+
+a.category-link:hover {
+  border-bottom: 2px solid rgb(191, 139, 188); /* Ændrer tekstfarven ved hover */
+}
+
+a.category-link {
+  border-bottom: 1px solid #d8d8d8;
   display: flex;
-  flex-wrap: wrap;
-}
-
-.category-link {
-  text-decoration: none;
-  flex-basis: 100%; /* Hver kategori tager en hel række */
-}
-
-.category {
-  display: block;
-  padding: 10px;
-  border-bottom: 1px solid transparent; /* Streg under kategorien (standard er gennemsigtig) */
-  transition: border-color 0.3s ease; /* Overgang for stregfarve */
-}
-
-.category-link:hover .category {
-  color: #333; /* Ændrer tekstfarven ved hover */
-}
-
-.category-link:hover .category::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #333; /* Ændrer stregfarven ved hover */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-right: 12rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -177,9 +171,7 @@ article p {
   nav a {
     padding: 0;
   }
-  .category-link {
-    flex-basis: 100%; /* En kategori pr. række på mindre skærm */
-  }
+
   .categories {
     flex-direction: column; /* Skift retning til kolonne på mindre skærme */
   }
@@ -199,5 +191,11 @@ article p {
   }
   h2 {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  ol {
+    column-count: 2;
   }
 }

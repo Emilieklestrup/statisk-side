@@ -36,6 +36,10 @@ article.grid_2-1 {
   display: flex;
   flex-direction: row; /* Standard rækkefølge: børnene følger rækkefølgen i HTML */
 }
+section.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 768px) {
   .grid_2-1 {
@@ -53,5 +57,9 @@ article.grid_2-1 {
   /* Ryk billedsektionen til toppen */
   .container_billede {
     order: -1; /* Sætter billedsektionen øverst i rækkefølgen */
+  }
+
+  section.categories {
+    flex-direction: column; /* Skift til kolonne layout på mindre skærme */
   }
 }
