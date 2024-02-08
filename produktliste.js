@@ -1,4 +1,7 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
   .then((res) => res.json())
   .then(showProducts);
 
@@ -14,19 +17,42 @@ function showProduct(product) {
 
   //lav en kopi
   const copy = template.cloneNode(true);
-  //ændre indhold
-  copy.querySelector("h3").textContent = product.productdisplayname;
-  if (product.soldout) {
-    copy.querySelector("article").classList.add("soldout");
-  }
-  //   myClone.querySelector("img").src = product.img;
 
+  const productid = 123456;
+  const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+
+  //ændre indhold
+
+  //   myClone.querySelector("img").src = product.img;
+  copy.querySelector("h3").textContent = product.productdisplayname;
   copy.querySelector(".price").textContent = product.price;
   copy.querySelector(".mærke").textContent = product.brandname;
-  //   copy.querySelector(".billeder").src = product.smallimage;
+  copy.querySelector(
+    "img"
+  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+
+  // document.querySelector(
+  //   ".billeder"
+  // ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+
+  if (product.soldout) {
+    //copy.querySelector("article").classList.add("soldOut");
+  } else {
+    copy.querySelector(".udsolgt").remove();
+  }
+
+  if (product.discount) {
+    //copy.querySelector("article").classList.add("soldOut");
+  } else {
+    copy.querySelector(".tilbud").remove();
+  }
+
+  copy
+    .querySelector(".product-link")
+    .setAttribute("href", `produkt.html?id=${product.id}`);
 
   //appende
-  document.querySelector("main").appendChild(copy);
+  document.querySelector(".grid").appendChild(copy);
 }
 
 //  <template id="smallProductTemplate">

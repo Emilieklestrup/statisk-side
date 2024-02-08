@@ -40,31 +40,31 @@
 
     <main>
       <h1>Produktliste</h1>
+      <section class="grid">
+        <template id="smallProductTemplate">
+          <div class="product-list">
+            <a href="produkt.html" class="product-link">
+              <article class="smallProduct">
+                <img
+                  class="billeder"
+                  src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+                  alt="lille billede af produkt"
+                />
+                <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
 
-      <template id="smallProductTemplate">
-        <div class="product-list">
-          <a href="produkt.html" class="product-link">
-            <article class="smallProduct">
-              <img
-                class="billeder"
-                src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
-                alt="lille billede af produkt"
-              />
-              <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+                <p class="mærke">NIKE - Sports</p>
 
-              <p class="mærke">NIKE - Sports</p>
+                <p class="price">895 DKK</p>
 
-              <p class="price">895 DKK</p>
+                <p>Read more</p>
+                <p class="udsolgt">Udsolgt</p>
+                <p class="tilbud">Tilbud</p>
+              </article>
+            </a>
+          </div>
+        </template>
 
-              <p>Read more</p>
-
-              <p class="udsolgt">Udsolgt</p>
-            </article>
-          </a>
-        </div>
-      </template>
-
-      <!-- 
+        <!-- 
         <a href="produkt.html" class="product-link">
            <article class="smallProduct">
             <img class="billeder"
@@ -75,6 +75,8 @@
             <p>NIKE - Sports</p>
             <p class="price">1595 DKK</p>
             <p>Read more</p>
+            <p class="udsolgt">Udsolgt</p>
+
           </article>
         </a>
 
@@ -120,7 +122,8 @@
             <p class="price">1299 DKK</p>
             <p>Read more</p>
           </article> -->
-      <!-- </a> -->
+        <!-- </a> -->
+      </section>
     </main>
     <script src="produktliste.js"></script>
     <footer></footer>
